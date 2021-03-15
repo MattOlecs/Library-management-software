@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Library_management
+namespace Medical_Clinic_Management
 {
     static class Program
     {

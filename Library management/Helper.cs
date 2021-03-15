@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Text;
 
-namespace Library_management
+namespace Medical_Clinic_Management
 {
     class Helper
     {

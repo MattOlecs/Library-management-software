@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Library_management
+namespace Medical_Clinic_Management
 {
     public class Employee : Person
     {

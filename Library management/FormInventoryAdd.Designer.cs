@@ -1,5 +1,5 @@
 ﻿
-namespace Library_management
+namespace Medical_Clinic_Management
 {
     partial class FormInventoryAdd
     {
