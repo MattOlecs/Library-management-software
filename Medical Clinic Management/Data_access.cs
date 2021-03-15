@@ -6,7 +6,7 @@ using System.Data;
 using Dapper;
 using System.Linq;
 
-namespace Medical_Clinic_Management
+namespace Library_management
 {
     public class Data_Access
     {
