@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace Medical_Clinic_Management
+{
+    public partial class FormEmployeeList : Form
+    {
+        public FormEmployeeList()
+        {
+            InitializeComponent();
+        }
+
+        private void Form_2_Load(object sender, EventArgs e)
+        {
+            Data_Access emp = new Data_Access();
+            dataGridView1.DataSource = emp.GetAllEmployees();
+        }
+
+        private void button_OpenEmployeeWindow_Click(object sender, EventArgs e)
+        {
+                if (dataGridView1.SelectedRows.Count == 1)
+                {
+                    bool edit = true;
+                    Employee employee = (Employee)dataGridView1.CurrentRow.DataBoundItem;
+                    Form form = new FormSingleEmployeeInfo(employee, edit);
+                    form.ShowDialog();
+                }
+                else
+                MessageBox.Show("You have to select one employee!", "Error");
+        }
+
+        private void buttonAddEmployee_Click(object sender, EventArgs e)
+        {
+
+            Employee employee = new Employee();
+
+            bool edit = false;
+            Form form = new FormSingleEmployeeInfo(employee, edit);
+            form.ShowDialog();
+        }
+
+        
+    }
+}
