@@ -56,11 +56,31 @@ namespace Medical_Clinic_Management
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form test = new FormEmployeeList();
-            test.Show();
-            test.MdiParent = this;
+            Form formEmployeeList = new FormEmployeeList();
+            formEmployeeList.Show();
+            formEmployeeList.MdiParent = this;
             hideSubMenu();
-            test.Dock = DockStyle.Fill;
+            formEmployeeList.Dock = DockStyle.Fill;
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            Form formInventorySearch = new FormInventorySearch();
+
+            formInventorySearch.Show();
+            formInventorySearch.MdiParent = this;
+            hideSubMenu();
+            formInventorySearch.Dock = DockStyle.Fill;
+        }
+
+        private void buttonAddNewItem_Click(object sender, EventArgs e)
+        {
+            Form formInventoryAdd = new FormInventoryAdd();
+
+            formInventoryAdd.Show();
+            formInventoryAdd.MdiParent = this;
+            hideSubMenu();
+            formInventoryAdd.Dock = DockStyle.Fill;
         }
 
 
