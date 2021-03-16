@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Medical_Clinic_Management
+namespace Library_management
 {
     public partial class MainForm : Form
     {

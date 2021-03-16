@@ -6,13 +6,18 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Medical_Clinic_Management
+namespace Library_management
 {
     public partial class FormInventoryAdd : Form
     {
         public FormInventoryAdd()
         {
             InitializeComponent();
+        }
+
+        private void buttonConfirm_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
