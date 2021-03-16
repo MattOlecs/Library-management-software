@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Configuration;
 using System.Collections.Generic;
-using System.Text;
 using System.Data;
-using Dapper;
 using System.Linq;
+using System.Text;
+using Dapper;
 
-namespace Medical_Clinic_Management
+namespace Library_management
 {
-    public class Data_Access
+    class EmployeeDataAccess
     {
-
-
-
         public List<Employee> GetAllEmployees()
         {
             //Had to add Microsoft.Data.SqlClient through Nuget
@@ -42,6 +38,13 @@ namespace Medical_Clinic_Management
             }
         }
 
-        
+        //test function
+        private IDbConnection GiveCon()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Library_management")))
+            {
+                return connection;
+            }
+        }
     }
 }

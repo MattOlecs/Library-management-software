@@ -4,14 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Medical_Clinic_Management
+namespace Library_management
 {
     static class Program
     {
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
-        /// just a test comment
         [STAThread]
         static void Main()
         {

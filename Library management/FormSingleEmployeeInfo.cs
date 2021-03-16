@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Medical_Clinic_Management
+namespace Library_management
 {
     public partial class FormSingleEmployeeInfo : Form
     {
@@ -44,7 +44,7 @@ namespace Medical_Clinic_Management
 
         private void buttonAddEmployee_Click(object sender, EventArgs e)
         {
-            Data_Access da = new Data_Access();
+            EmployeeDataAccess da = new EmployeeDataAccess();
 
             try
             {
@@ -53,9 +53,9 @@ namespace Medical_Clinic_Management
                 MessageBox.Show("Employee added succesfully.");
                 this.Close();
             }
-            catch
+            catch(Exception ex)
             {
-                MessageBox.Show("Incorrect employee information.", "Error");
+                MessageBox.Show($"Incorrect employee information. {ex.Message}", "Error");
             }
     
         }

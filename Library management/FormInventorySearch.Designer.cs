@@ -1,5 +1,5 @@
 ﻿
-namespace Medical_Clinic_Management
+namespace Library_management
 {
     partial class FormInventorySearch
     {
