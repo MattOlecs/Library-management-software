@@ -39,11 +39,11 @@ namespace Library_management
         }
 
         //test function
-        private IDbConnection GiveCon()
+        private void connection()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Library_management")))
             {
-                return connection;
+                
             }
         }
     }

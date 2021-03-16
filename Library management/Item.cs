@@ -8,9 +8,9 @@ namespace Library_management
     {
 
         private string _type, _genre, _title, _author, _publisher, _isbn, _shelf;
-        private int _editionNumber, _copies;
+        private int _editionNumber, _pages, _copies;
 
-        public Item(string type, string genre, string title, string author, string publisher, int editionNumber, string isbn, int copies, string shelf)
+        public Item(string type, string genre, string title, string author, string publisher, int editionNumber, int pages, string isbn, int copies, string shelf)
         {
             this.Type = type;
             this.Genre = genre;
@@ -18,6 +18,7 @@ namespace Library_management
             this.Author = author;
             this.Publisher = publisher;
             this.EditionNumber = editionNumber;
+            this.Pages = pages;
             this.Isbn = isbn;
             this.Copies = copies;
             this.Shelf = shelf;
@@ -58,6 +59,12 @@ namespace Library_management
             get => _editionNumber;
 
             set => _editionNumber = value;
+        }
+        public int Pages
+        {
+            get => _pages;
+
+            set => _pages = value;
         }
         public string Isbn
         {

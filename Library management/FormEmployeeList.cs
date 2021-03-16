@@ -17,7 +17,7 @@ namespace Library_management
 
         private void Form_2_Load(object sender, EventArgs e)
         {
-            Data_Access emp = new Data_Access();
+            EmployeeDataAccess emp = new EmployeeDataAccess();
             dataGridView1.DataSource = emp.GetAllEmployees();
         }
 
