@@ -1,5 +1,5 @@
 ﻿
-namespace Medical_Clinic_Management
+namespace Library_management
 {
     partial class MainForm
     {
@@ -31,6 +31,7 @@ namespace Medical_Clinic_Management
         {
             this.panel_Menu = new System.Windows.Forms.Panel();
             this.panel_SlideMenu2 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@ namespace Medical_Clinic_Management
             this.buttonSearch = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel_Logo = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.panel_Menu.SuspendLayout();
             this.panel_SlideMenu2.SuspendLayout();
             this.panel_SlideMenu1.SuspendLayout();
@@ -75,6 +75,22 @@ namespace Medical_Clinic_Management
             this.panel_SlideMenu2.Name = "panel_SlideMenu2";
             this.panel_SlideMenu2.Size = new System.Drawing.Size(250, 144);
             this.panel_SlideMenu2.TabIndex = 5;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(0, 105);
+            this.button8.Name = "button8";
+            this.button8.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button8.Size = new System.Drawing.Size(250, 35);
+            this.button8.TabIndex = 4;
+            this.button8.Text = "-";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -202,6 +218,7 @@ namespace Medical_Clinic_Management
             this.buttonAddNewItem.Text = "Add new item";
             this.buttonAddNewItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAddNewItem.UseVisualStyleBackColor = false;
+            this.buttonAddNewItem.Click += new System.EventHandler(this.buttonAddNewItem_Click);
             // 
             // buttonSearch
             // 
@@ -218,6 +235,7 @@ namespace Medical_Clinic_Management
             this.buttonSearch.Text = "Search";
             this.buttonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // button1
             // 
@@ -243,22 +261,6 @@ namespace Medical_Clinic_Management
             this.panel_Logo.Name = "panel_Logo";
             this.panel_Logo.Size = new System.Drawing.Size(250, 86);
             this.panel_Logo.TabIndex = 0;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(0, 105);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(250, 35);
-            this.button8.TabIndex = 4;
-            this.button8.Text = "-";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
