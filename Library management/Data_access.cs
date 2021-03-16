@@ -6,13 +6,11 @@ using System.Data;
 using Dapper;
 using System.Linq;
 
-namespace Medical_Clinic_Management
+
+namespace Library_management
 {
     public class Data_Access
     {
-
-
-
         public List<Employee> GetAllEmployees()
         {
             //Had to add Microsoft.Data.SqlClient through Nuget
@@ -42,6 +40,13 @@ namespace Medical_Clinic_Management
             }
         }
 
-        
+        private IDbConnection GiveCon()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Library_management")))
+            {
+                return connection;
+            }
+        }
+
     }
 }

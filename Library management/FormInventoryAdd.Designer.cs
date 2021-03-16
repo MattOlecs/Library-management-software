@@ -1,5 +1,5 @@
 ﻿
-namespace Medical_Clinic_Management
+namespace Library_management
 {
     partial class FormInventoryAdd
     {
@@ -61,7 +61,7 @@ namespace Medical_Clinic_Management
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Location = new System.Drawing.Point(23, 34);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(204, 253);
+            this.panel1.Size = new System.Drawing.Size(171, 200);
             this.panel1.TabIndex = 0;
             // 
             // comboBoxType
@@ -245,18 +245,19 @@ namespace Medical_Clinic_Management
             // 
             // buttonConfirm
             // 
-            this.buttonConfirm.Location = new System.Drawing.Point(144, 356);
+            this.buttonConfirm.Location = new System.Drawing.Point(679, 441);
             this.buttonConfirm.Name = "buttonConfirm";
-            this.buttonConfirm.Size = new System.Drawing.Size(190, 40);
+            this.buttonConfirm.Size = new System.Drawing.Size(115, 34);
             this.buttonConfirm.TabIndex = 14;
             this.buttonConfirm.Text = "Confirm";
             this.buttonConfirm.UseVisualStyleBackColor = true;
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(421, 356);
+            this.buttonCancel.Location = new System.Drawing.Point(23, 441);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(190, 40);
+            this.buttonCancel.Size = new System.Drawing.Size(115, 34);
             this.buttonCancel.TabIndex = 15;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
