@@ -5,10 +5,6 @@ using System.Linq;
 using System.Text;
 using Dapper;
 
-<<<<<<< HEAD:Library management/DataAccess/EmployeeDataAccess.cs
-=======
-
->>>>>>> c16c64a70576d974d0ba3717b8019d02bad86a69:Library management/Data_access.cs
 namespace Library_management
 {
     class EmployeeDataAccess
@@ -42,7 +38,6 @@ namespace Library_management
             }
         }
 
-<<<<<<< HEAD:Library management/DataAccess/EmployeeDataAccess.cs
         //test function
         private void connection()
         {
@@ -51,9 +46,6 @@ namespace Library_management
                 
             }
         }
-<<<<<<< HEAD:Library management/DataAccess/EmployeeDataAccess.cs
-=======
 
->>>>>>> c16c64a70576d974d0ba3717b8019d02bad86a69:Library management/Data_access.cs
     }
 }

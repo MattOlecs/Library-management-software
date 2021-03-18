@@ -10,6 +10,8 @@ namespace Library_management
         private string _type, _genre, _title, _author, _publisher, _isbn, _shelf;
         private int _editionNumber, _pages, _copies;
 
+        public Item()
+        { }
         public Item(string type, string genre, string title, string author, string publisher, int editionNumber, int pages, string isbn, int copies, string shelf)
         {
             this.Type = type;
