@@ -23,6 +23,7 @@ namespace Library_management
         {
             panel_SlideMenu1.Visible = false;
             panel_SlideMenu2.Visible = false;
+            panel_SlideMenu3.Visible = false;
         }
 
         private void hideSubMenu()
@@ -32,6 +33,9 @@ namespace Library_management
             
             if (panel_SlideMenu2.Visible == true)
                 panel_SlideMenu2.Visible = false;
+
+            if (panel_SlideMenu3.Visible == true)
+                panel_SlideMenu3.Visible = false;
         }
 
         private void showSubMenu(Panel subMenu)
@@ -44,17 +48,23 @@ namespace Library_management
             else
                 subMenu.Visible = false;
         }
+        
         private void buttonInventory_Click(object sender, EventArgs e)
         {
             showSubMenu(panel_SlideMenu1);
         }
-
-        private void buttonEmployeesManagement_Click(object sender, EventArgs e)
+        
+        private void buttonMembersManage_Click(object sender, EventArgs e)
         {
             showSubMenu(panel_SlideMenu2);
         }
+        
+        private void buttonEmployeesManagement_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panel_SlideMenu3);
+        }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void buttonEmployeesList_Click(object sender, EventArgs e)
         {
             Form formEmployeeList = new FormEmployeeList();
             formEmployeeList.Show();
@@ -82,6 +92,22 @@ namespace Library_management
             hideSubMenu();
             formInventoryAdd.Dock = DockStyle.Fill;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAddEmployee_Click(object sender, EventArgs e)
+        {
+            Employee employee = new Employee();
+
+            Form form = new FormSingleEmployeeInfo(employee, false);
+            form.ShowDialog();
+        }
+
+
+
 
 
 

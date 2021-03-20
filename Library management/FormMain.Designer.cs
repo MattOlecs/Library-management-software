@@ -30,12 +30,18 @@ namespace Library_management
         private void InitializeComponent()
         {
             this.panel_Menu = new System.Windows.Forms.Panel();
-            this.panel_SlideMenu2 = new System.Windows.Forms.Panel();
+            this.panel_SlideMenu3 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.buttonAddEmployee = new System.Windows.Forms.Button();
+            this.buttonEmployeesList = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel_SlideMenu2 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.buttonMembersManage = new System.Windows.Forms.Button();
             this.panel_SlideMenu1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -44,6 +50,7 @@ namespace Library_management
             this.button1 = new System.Windows.Forms.Button();
             this.panel_Logo = new System.Windows.Forms.Panel();
             this.panel_Menu.SuspendLayout();
+            this.panel_SlideMenu3.SuspendLayout();
             this.panel_SlideMenu2.SuspendLayout();
             this.panel_SlideMenu1.SuspendLayout();
             this.SuspendLayout();
@@ -52,8 +59,10 @@ namespace Library_management
             // 
             this.panel_Menu.AutoScroll = true;
             this.panel_Menu.BackColor = System.Drawing.Color.Black;
-            this.panel_Menu.Controls.Add(this.panel_SlideMenu2);
+            this.panel_Menu.Controls.Add(this.panel_SlideMenu3);
             this.panel_Menu.Controls.Add(this.button2);
+            this.panel_Menu.Controls.Add(this.panel_SlideMenu2);
+            this.panel_Menu.Controls.Add(this.buttonMembersManage);
             this.panel_Menu.Controls.Add(this.panel_SlideMenu1);
             this.panel_Menu.Controls.Add(this.button1);
             this.panel_Menu.Controls.Add(this.panel_Logo);
@@ -63,18 +72,18 @@ namespace Library_management
             this.panel_Menu.Size = new System.Drawing.Size(250, 761);
             this.panel_Menu.TabIndex = 0;
             // 
-            // panel_SlideMenu2
+            // panel_SlideMenu3
             // 
-            this.panel_SlideMenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel_SlideMenu2.Controls.Add(this.button8);
-            this.panel_SlideMenu2.Controls.Add(this.button3);
-            this.panel_SlideMenu2.Controls.Add(this.button4);
-            this.panel_SlideMenu2.Controls.Add(this.button5);
-            this.panel_SlideMenu2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_SlideMenu2.Location = new System.Drawing.Point(0, 310);
-            this.panel_SlideMenu2.Name = "panel_SlideMenu2";
-            this.panel_SlideMenu2.Size = new System.Drawing.Size(250, 144);
-            this.panel_SlideMenu2.TabIndex = 5;
+            this.panel_SlideMenu3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel_SlideMenu3.Controls.Add(this.button8);
+            this.panel_SlideMenu3.Controls.Add(this.button3);
+            this.panel_SlideMenu3.Controls.Add(this.buttonAddEmployee);
+            this.panel_SlideMenu3.Controls.Add(this.buttonEmployeesList);
+            this.panel_SlideMenu3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_SlideMenu3.Location = new System.Drawing.Point(0, 494);
+            this.panel_SlideMenu3.Name = "panel_SlideMenu3";
+            this.panel_SlideMenu3.Size = new System.Drawing.Size(250, 144);
+            this.panel_SlideMenu3.TabIndex = 5;
             // 
             // button8
             // 
@@ -108,38 +117,39 @@ namespace Library_management
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // buttonAddEmployee
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 35);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(250, 35);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "-";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
+            this.buttonAddEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAddEmployee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAddEmployee.FlatAppearance.BorderSize = 0;
+            this.buttonAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddEmployee.ForeColor = System.Drawing.Color.White;
+            this.buttonAddEmployee.Location = new System.Drawing.Point(0, 35);
+            this.buttonAddEmployee.Name = "buttonAddEmployee";
+            this.buttonAddEmployee.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.buttonAddEmployee.Size = new System.Drawing.Size(250, 35);
+            this.buttonAddEmployee.TabIndex = 2;
+            this.buttonAddEmployee.Text = "Add new";
+            this.buttonAddEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAddEmployee.UseVisualStyleBackColor = false;
+            this.buttonAddEmployee.Click += new System.EventHandler(this.buttonAddEmployee_Click);
             // 
-            // button5
+            // buttonEmployeesList
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(250, 35);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "-";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonEmployeesList.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEmployeesList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonEmployeesList.FlatAppearance.BorderSize = 0;
+            this.buttonEmployeesList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEmployeesList.ForeColor = System.Drawing.Color.White;
+            this.buttonEmployeesList.Location = new System.Drawing.Point(0, 0);
+            this.buttonEmployeesList.Name = "buttonEmployeesList";
+            this.buttonEmployeesList.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.buttonEmployeesList.Size = new System.Drawing.Size(250, 35);
+            this.buttonEmployeesList.TabIndex = 1;
+            this.buttonEmployeesList.Text = "Employees list";
+            this.buttonEmployeesList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEmployeesList.UseVisualStyleBackColor = false;
+            this.buttonEmployeesList.Click += new System.EventHandler(this.buttonEmployeesList_Click);
             // 
             // button2
             // 
@@ -148,7 +158,7 @@ namespace Library_management
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 270);
+            this.button2.Location = new System.Drawing.Point(0, 454);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(250, 40);
@@ -157,6 +167,100 @@ namespace Library_management
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.buttonEmployeesManagement_Click);
+            // 
+            // panel_SlideMenu2
+            // 
+            this.panel_SlideMenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel_SlideMenu2.Controls.Add(this.button9);
+            this.panel_SlideMenu2.Controls.Add(this.button10);
+            this.panel_SlideMenu2.Controls.Add(this.button11);
+            this.panel_SlideMenu2.Controls.Add(this.button12);
+            this.panel_SlideMenu2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_SlideMenu2.Location = new System.Drawing.Point(0, 310);
+            this.panel_SlideMenu2.Name = "panel_SlideMenu2";
+            this.panel_SlideMenu2.Size = new System.Drawing.Size(250, 144);
+            this.panel_SlideMenu2.TabIndex = 6;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Transparent;
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(0, 105);
+            this.button9.Name = "button9";
+            this.button9.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button9.Size = new System.Drawing.Size(250, 35);
+            this.button9.TabIndex = 4;
+            this.button9.Text = "-";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(0, 70);
+            this.button10.Name = "button10";
+            this.button10.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button10.Size = new System.Drawing.Size(250, 35);
+            this.button10.TabIndex = 3;
+            this.button10.Text = "-";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(0, 35);
+            this.button11.Name = "button11";
+            this.button11.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button11.Size = new System.Drawing.Size(250, 35);
+            this.button11.TabIndex = 2;
+            this.button11.Text = "-";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Transparent;
+            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.Location = new System.Drawing.Point(0, 0);
+            this.button12.Name = "button12";
+            this.button12.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button12.Size = new System.Drawing.Size(250, 35);
+            this.button12.TabIndex = 1;
+            this.button12.Text = "-";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // buttonMembersManage
+            // 
+            this.buttonMembersManage.BackColor = System.Drawing.Color.Transparent;
+            this.buttonMembersManage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonMembersManage.FlatAppearance.BorderSize = 0;
+            this.buttonMembersManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMembersManage.ForeColor = System.Drawing.Color.White;
+            this.buttonMembersManage.Location = new System.Drawing.Point(0, 270);
+            this.buttonMembersManage.Name = "buttonMembersManage";
+            this.buttonMembersManage.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonMembersManage.Size = new System.Drawing.Size(250, 40);
+            this.buttonMembersManage.TabIndex = 6;
+            this.buttonMembersManage.Text = "Members management";
+            this.buttonMembersManage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonMembersManage.UseVisualStyleBackColor = false;
+            this.buttonMembersManage.Click += new System.EventHandler(this.buttonMembersManage_Click);
             // 
             // panel_SlideMenu1
             // 
@@ -272,6 +376,7 @@ namespace Library_management
             this.Name = "MainForm";
             this.Text = "Clinic Management";
             this.panel_Menu.ResumeLayout(false);
+            this.panel_SlideMenu3.ResumeLayout(false);
             this.panel_SlideMenu2.ResumeLayout(false);
             this.panel_SlideMenu1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -284,8 +389,8 @@ namespace Library_management
         private System.Windows.Forms.Panel panel_Logo;
         private System.Windows.Forms.Panel panel_SlideMenu2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button buttonAddEmployee;
+        private System.Windows.Forms.Button buttonEmployeesList;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel_SlideMenu1;
         private System.Windows.Forms.Button button6;
@@ -294,6 +399,12 @@ namespace Library_management
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Panel panel_SlideMenu3;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button buttonMembersManage;
     }
 }
 

@@ -25,25 +25,28 @@ namespace Library_management
         {
                 if (dataGridView1.SelectedRows.Count == 1)
                 {
-                    bool edit = true;
                     Employee employee = (Employee)dataGridView1.CurrentRow.DataBoundItem;
-                    Form form = new FormSingleEmployeeInfo(employee, edit);
+                    Form form = new FormSingleEmployeeInfo(employee, true);
                     form.ShowDialog();
                 }
                 else
                 MessageBox.Show("You have to select one employee!", "Error");
         }
 
-        private void buttonAddEmployee_Click(object sender, EventArgs e)
+        private void buttonSearchEmployee_Click(object sender, EventArgs e)
         {
 
-            Employee employee = new Employee();
 
-            bool edit = false;
-            Form form = new FormSingleEmployeeInfo(employee, edit);
-            form.ShowDialog();
+            try
+            {
+                EmployeeDataAccess eDA = new EmployeeDataAccess();
+
+                eDA.SearchEmployees(comboBoxSearchByType.SelectedItem.ToString(), textBoxSearchedValue.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
-
-        
     }
 }

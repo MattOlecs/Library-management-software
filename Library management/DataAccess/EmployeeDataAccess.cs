@@ -38,12 +38,11 @@ namespace Library_management
             }
         }
 
-        //test function
-        private void connection()
+        public List<Employee> SearchEmployees(string searchedBy, string searchedValue)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Library_management")))
             {
-                
+                return connection.Query<Employee>($"dbo.SearchBy{searchedBy}_Employees @SearchedValue", new { SearchedValue = searchedValue }).ToList();
             }
         }
 
