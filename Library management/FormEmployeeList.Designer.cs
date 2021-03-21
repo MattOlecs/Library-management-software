@@ -116,7 +116,11 @@ namespace Library_management
             this.comboBoxSearchByType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSearchByType.FormattingEnabled = true;
             this.comboBoxSearchByType.Items.AddRange(new object[] {
-            "FirstName"});
+            "ID",
+            "First Name",
+            "Last Name",
+            "Address",
+            "Position"});
             this.comboBoxSearchByType.Location = new System.Drawing.Point(12, 59);
             this.comboBoxSearchByType.Name = "comboBoxSearchByType";
             this.comboBoxSearchByType.Size = new System.Drawing.Size(197, 23);

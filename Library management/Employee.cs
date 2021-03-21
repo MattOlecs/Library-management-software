@@ -6,20 +6,47 @@ namespace Library_management
 {
     public class Employee : Person
     {
-        public Employee()
-        {
+        private string _position;
+        private int _employeeId;
 
-        }
+
+        public Employee()
+        {}
 
         public Employee(string firstName, string lastName, string address, DateTime birthDate, string position): base(firstName, lastName, address, birthDate) 
         {
-            Position = position;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Address = address;
+            this.BirthDate = birthDate;
+            this.Position = position;
         }
 
-        [System.ComponentModel.DisplayName("Employee ID")] //Using it to change column name in datagridview
-        public int EmployeeId { get; }
+        public Employee(int employeeId, string firstName, string lastName, string address, DateTime birthDate, string position) : base(firstName, lastName, address, birthDate)
+        {
+            this.EmployeeId = employeeId;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Address = address;
+            this.BirthDate = birthDate;
+            this.Position = position;
+        }
 
-        public string Position { get; }
+
+        [System.ComponentModel.DisplayName("Employee ID")] //Using it to change column name in datagridview
+        public int EmployeeId
+        {
+            get => _employeeId;
+
+            set => _employeeId = value;
+        }
+
+        public string Position
+        {
+            get => _position;
+
+            set => _position = value;
+        }
 
     }
 }

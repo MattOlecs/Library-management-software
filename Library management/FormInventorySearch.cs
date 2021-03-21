@@ -15,10 +15,6 @@ namespace Library_management
             InitializeComponent();
         }
 
-        enum SearchBy
-        {
-            Type, Genre, Title, Author, Publisher, ISBN
-        }
 
         private void FormInventorySearch_Load(object sender, EventArgs e)
         {

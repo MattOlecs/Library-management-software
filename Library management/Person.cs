@@ -6,6 +6,8 @@ namespace Library_management
 {
     public class Person
     {
+        private string _firstName, _lastName, _address;
+        private DateTime _birthDate;
 
         public Person()
         {
@@ -20,15 +22,37 @@ namespace Library_management
             BirthDate = birthDate;
         }
 
-        [System.ComponentModel.DisplayName("Expire")]
-        public string FirstName { get; set; }
 
+        [System.ComponentModel.DisplayName("FirstName")]
+        public string FirstName
+        {
+            get => _firstName;
+
+            set => _firstName = value;
+        }
         [System.ComponentModel.DisplayName("Last Name")]
-        public string LastName { get; set; }
-        public string Address { get; set; }
+        public string LastName
+        {
+            get => _lastName;
 
+            set => _lastName = value;
+        }
+        
+        [System.ComponentModel.DisplayName("Address")]
+        public string Address
+        {
+            get => _address;
+
+            set => _address = value;
+        }
+        
         [System.ComponentModel.DisplayName("Birth date")]
-        public DateTime BirthDate { get; set; }
+        public DateTime BirthDate
+        {
+            get => _birthDate;
+
+            set => _birthDate = value;
+        }
 
     }
 }
