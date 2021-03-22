@@ -32,9 +32,15 @@ namespace Library_management
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Library_management")))
             {
-                //connection.Execute("dbo.Insert_Employee @FirstName, @LastName, @Address, @BirthDate, @Position", new Employee {FirstName = firstName, LastName = lastName, Address = address, BirthDate = birthDate, Position = position});
                 connection.Execute("dbo.Insert_Employee @FirstName, @LastName, @Address, @BirthDate, @Position", new Employee(firstName, lastName, address, birthDate, position));
+            }
+        }
 
+        public void UpdateEmployee(string employeeId, string firstName, string lastName, string address, string position, DateTime birthDate)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Library_management")))
+            {
+                connection.Execute("dbo.UpdateEmployee_Employees @EmployeeId, @FirstName, @LastName, @Address, @BirthDate, @Position", new { EmployeeId = employeeId, FirstName = firstName, LastName = lastName, Address = address, BirthDate = birthDate, Position = position });
             }
         }
 

@@ -17,8 +17,6 @@ namespace Library_management
 
         private void Form_2_Load(object sender, EventArgs e)
         {
-
-            
             comboBoxSearchByType.SelectedIndex = 0;
         }
 
@@ -74,6 +72,9 @@ namespace Library_management
                 }
                 else
                     dataGridView1.DataSource = foundEmployees;
+
+                //due to order in class properties, had to set displayindex of this column
+                dataGridView1.Columns["Position"].DisplayIndex = 3;
 
             }
             catch (Exception ex)

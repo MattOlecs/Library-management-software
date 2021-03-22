@@ -13,7 +13,7 @@ namespace Library_management
         public Employee()
         {}
 
-        public Employee(string firstName, string lastName, string address, DateTime birthDate, string position): base(firstName, lastName, address, birthDate) 
+        public Employee(string firstName, string lastName, string address, DateTime birthDate, string position)//: base(firstName, lastName, address, birthDate) 
         {
             this.FirstName = firstName;
             this.LastName = lastName;
@@ -22,7 +22,7 @@ namespace Library_management
             this.Position = position;
         }
 
-        public Employee(int employeeId, string firstName, string lastName, string address, DateTime birthDate, string position) : base(firstName, lastName, address, birthDate)
+        public Employee(int employeeId, string firstName, string lastName, string address, DateTime birthDate, string position) //: base(firstName, lastName, address, birthDate)
         {
             this.EmployeeId = employeeId;
             this.FirstName = firstName;
