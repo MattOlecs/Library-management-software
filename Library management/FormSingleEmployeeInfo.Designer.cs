@@ -216,7 +216,6 @@ namespace Library_management
             this.Controls.Add(this.textBoxLastName);
             this.Controls.Add(this.textBoxFirstName);
             this.Name = "FormSingleEmployeeInfo";
-            this.Text = "Single_Employee_Info";
             this.ResumeLayout(false);
             this.PerformLayout();
 

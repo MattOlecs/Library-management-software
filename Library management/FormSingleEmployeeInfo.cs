@@ -80,7 +80,11 @@ namespace Library_management
                 DialogResult result = MessageBox.Show("Are you sure you want to change this employee personal information?", "Confirm data change", MessageBoxButtons.YesNoCancel);
 
                 if (result == DialogResult.Yes)
+                {
                     dA.UpdateEmployee(textBoxNumber.Text, textBoxFirstName.Text, textBoxLastName.Text, textBoxAddress.Text, textBoxPosition.Text, DateTime.ParseExact(maskedTextBoxBirthDate.Text, "d", null));
+                    
+                    this.Close();
+                }
 
             }
             catch (Exception ex)
@@ -89,5 +93,7 @@ namespace Library_management
             }
                 
         }
+
+
     }
 }

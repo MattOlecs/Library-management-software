@@ -18,6 +18,11 @@ namespace Library_management
         private void Form_2_Load(object sender, EventArgs e)
         {
             comboBoxSearchByType.SelectedIndex = 0;
+
+            EmployeeDataAccess dA = new EmployeeDataAccess();
+            dataGridView1.DataSource = dA.GetAllEmployees();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            
         }
 
         private void button_OpenEmployeeWindow_Click(object sender, EventArgs e)
