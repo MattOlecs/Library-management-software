@@ -39,8 +39,8 @@ namespace Library_management
             this.panel_SlideMenu2 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.buttonAddMember = new System.Windows.Forms.Button();
+            this.buttonSearchMember = new System.Windows.Forms.Button();
             this.buttonMembersManage = new System.Windows.Forms.Button();
             this.panel_SlideMenu1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -129,7 +129,7 @@ namespace Library_management
             this.buttonAddEmployee.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.buttonAddEmployee.Size = new System.Drawing.Size(250, 35);
             this.buttonAddEmployee.TabIndex = 2;
-            this.buttonAddEmployee.Text = "Add new";
+            this.buttonAddEmployee.Text = "Add employee";
             this.buttonAddEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAddEmployee.UseVisualStyleBackColor = false;
             this.buttonAddEmployee.Click += new System.EventHandler(this.buttonAddEmployee_Click);
@@ -173,8 +173,8 @@ namespace Library_management
             this.panel_SlideMenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel_SlideMenu2.Controls.Add(this.button9);
             this.panel_SlideMenu2.Controls.Add(this.button10);
-            this.panel_SlideMenu2.Controls.Add(this.button11);
-            this.panel_SlideMenu2.Controls.Add(this.button12);
+            this.panel_SlideMenu2.Controls.Add(this.buttonAddMember);
+            this.panel_SlideMenu2.Controls.Add(this.buttonSearchMember);
             this.panel_SlideMenu2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_SlideMenu2.Location = new System.Drawing.Point(0, 310);
             this.panel_SlideMenu2.Name = "panel_SlideMenu2";
@@ -213,37 +213,38 @@ namespace Library_management
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // buttonAddMember
             // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(0, 35);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(250, 35);
-            this.button11.TabIndex = 2;
-            this.button11.Text = "-";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = false;
+            this.buttonAddMember.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAddMember.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAddMember.FlatAppearance.BorderSize = 0;
+            this.buttonAddMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddMember.ForeColor = System.Drawing.Color.White;
+            this.buttonAddMember.Location = new System.Drawing.Point(0, 35);
+            this.buttonAddMember.Name = "buttonAddMember";
+            this.buttonAddMember.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.buttonAddMember.Size = new System.Drawing.Size(250, 35);
+            this.buttonAddMember.TabIndex = 2;
+            this.buttonAddMember.Text = "Add member";
+            this.buttonAddMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAddMember.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // buttonSearchMember
             // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(0, 0);
-            this.button12.Name = "button12";
-            this.button12.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(250, 35);
-            this.button12.TabIndex = 1;
-            this.button12.Text = "-";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = false;
+            this.buttonSearchMember.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSearchMember.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonSearchMember.FlatAppearance.BorderSize = 0;
+            this.buttonSearchMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchMember.ForeColor = System.Drawing.Color.White;
+            this.buttonSearchMember.Location = new System.Drawing.Point(0, 0);
+            this.buttonSearchMember.Name = "buttonSearchMember";
+            this.buttonSearchMember.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.buttonSearchMember.Size = new System.Drawing.Size(250, 35);
+            this.buttonSearchMember.TabIndex = 1;
+            this.buttonSearchMember.Text = "Search";
+            this.buttonSearchMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSearchMember.UseVisualStyleBackColor = false;
+            this.buttonSearchMember.Click += new System.EventHandler(this.buttonSearchMember_Click);
             // 
             // buttonMembersManage
             // 
@@ -319,7 +320,7 @@ namespace Library_management
             this.buttonAddNewItem.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.buttonAddNewItem.Size = new System.Drawing.Size(250, 35);
             this.buttonAddNewItem.TabIndex = 1;
-            this.buttonAddNewItem.Text = "Add new item";
+            this.buttonAddNewItem.Text = "Add";
             this.buttonAddNewItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAddNewItem.UseVisualStyleBackColor = false;
             this.buttonAddNewItem.Click += new System.EventHandler(this.buttonAddNewItem_Click);
@@ -374,7 +375,7 @@ namespace Library_management
             this.ClientSize = new System.Drawing.Size(1084, 761);
             this.Controls.Add(this.panel_Menu);
             this.Name = "MainForm";
-            this.Text = "Clinic Management";
+            this.Text = "Library Management";
             this.panel_Menu.ResumeLayout(false);
             this.panel_SlideMenu3.ResumeLayout(false);
             this.panel_SlideMenu2.ResumeLayout(false);
@@ -402,8 +403,8 @@ namespace Library_management
         private System.Windows.Forms.Panel panel_SlideMenu3;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button buttonAddMember;
+        private System.Windows.Forms.Button buttonSearchMember;
         private System.Windows.Forms.Button buttonMembersManage;
     }
 }

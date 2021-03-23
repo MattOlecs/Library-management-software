@@ -106,6 +106,17 @@ namespace Library_management
             form.ShowDialog();
         }
 
+        private void buttonSearchMember_Click(object sender, EventArgs e)
+        {
+            LibraryCard card = new LibraryCard(1);
+
+            Form form = new FormMembersSearch();
+            form.ShowDialog();
+
+            MessageBox.Show(card.CardNumber);
+
+        }
+
 
 
 
