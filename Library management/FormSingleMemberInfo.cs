@@ -14,5 +14,14 @@ namespace Library_management
         {
             InitializeComponent();
         }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            LibraryCard card = new LibraryCard(1, textBoxCardNumber.Text);
+
+            LibraryCardDataAccess dA = new LibraryCardDataAccess();
+
+            dA.InsertLibraryCard(card);
+        }
     }
 }

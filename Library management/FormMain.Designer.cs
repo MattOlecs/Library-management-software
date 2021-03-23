@@ -228,6 +228,7 @@ namespace Library_management
             this.buttonAddMember.Text = "Add member";
             this.buttonAddMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAddMember.UseVisualStyleBackColor = false;
+            this.buttonAddMember.Click += new System.EventHandler(this.buttonAddMember_Click);
             // 
             // buttonSearchMember
             // 

@@ -42,7 +42,7 @@ namespace Library_management
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxCardNumber = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -134,6 +134,7 @@ namespace Library_management
             this.buttonAdd.TabIndex = 10;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonConfirm
             // 
@@ -153,13 +154,12 @@ namespace Library_management
             this.button1.Text = "Generate new card";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxCardNumber
             // 
-            this.textBox1.Location = new System.Drawing.Point(244, 248);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(326, 23);
-            this.textBox1.TabIndex = 13;
+            this.textBoxCardNumber.Location = new System.Drawing.Point(244, 248);
+            this.textBoxCardNumber.Name = "textBoxCardNumber";
+            this.textBoxCardNumber.Size = new System.Drawing.Size(326, 23);
+            this.textBoxCardNumber.TabIndex = 13;
             // 
             // label6
             // 
@@ -176,7 +176,7 @@ namespace Library_management
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 761);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxCardNumber);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.buttonAdd);
@@ -212,7 +212,7 @@ namespace Library_management
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxCardNumber;
         private System.Windows.Forms.Label label6;
     }
 }

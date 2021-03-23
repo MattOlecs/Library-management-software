@@ -108,13 +108,14 @@ namespace Library_management
 
         private void buttonSearchMember_Click(object sender, EventArgs e)
         {
-            LibraryCard card = new LibraryCard(1);
-
             Form form = new FormMembersSearch();
             form.ShowDialog();
+        }
 
-            MessageBox.Show(card.CardNumber);
-
+        private void buttonAddMember_Click(object sender, EventArgs e)
+        {
+            Form form = new FormSingleMemberInfo();
+            form.ShowDialog();
         }
 
 
