@@ -93,11 +93,6 @@ namespace Library_management
             formInventoryAdd.Dock = DockStyle.Fill;
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonAddEmployee_Click(object sender, EventArgs e)
         {
             Employee employee = new Employee();
@@ -112,39 +107,15 @@ namespace Library_management
             form.ShowDialog();
         }
 
+        //Opens Form in which you can add new member
+        //Form takse two values, first is Member class object, second is bool
+        //if bool = true Form is prepared for adding new member, if false, to edit existing member
         private void buttonAddMember_Click(object sender, EventArgs e)
         {
-            Form form = new FormSingleMemberInfo();
+            Member member = new Member();
+
+            Form form = new FormSingleMemberInfo(member, false);
             form.ShowDialog();
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //private void openChildForm(Form childForm)
-        //{
-        //    if (activeForm != null)
-        //        activeForm.Close();
-        //    activeForm = childForm;
-        //    childForm.TopLevel = false;
-        //    childForm.FormBorderStyle = FormBorderStyle.None;
-        //    childForm.Dock = DockStyle.Fill;
-        //    panel_ChildForm.Controls.Add(childForm);
-        //    panel_ChildForm.Tag = childForm;
-        //    childForm.BringToFront();
-        //    childForm.Show();
-        //}
-
     }
 }

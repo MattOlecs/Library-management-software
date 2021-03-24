@@ -34,13 +34,11 @@ namespace Library_management
                     form.ShowDialog();
                 }
                 else
-                MessageBox.Show("You have to select one employee!", "Error");
+                MessageBox.Show("No employee selected", "Error");
         }
 
         private void buttonSearchEmployee_Click(object sender, EventArgs e)
         {
-
-
             try
             {
                 EmployeeDataAccess eDA = new EmployeeDataAccess();

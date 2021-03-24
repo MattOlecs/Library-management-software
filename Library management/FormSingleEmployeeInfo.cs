@@ -10,22 +10,23 @@ namespace Library_management
 {
     public partial class FormSingleEmployeeInfo : Form
     {
-        public FormSingleEmployeeInfo(Employee employeee, bool edit)
+        public FormSingleEmployeeInfo(Employee employee, bool edit)
         {
             InitializeComponent();
 
             if (edit)
             {
-                textBoxNumber.Text = employeee.EmployeeId.ToString();
-                textBoxFirstName.Text = employeee.FirstName;
-                textBoxLastName.Text = employeee.LastName;
-                textBoxAddress.Text = employeee.Address;
-                textBoxPosition.Text = employeee.Position;
-                textBoxNumber.Text = employeee.EmployeeId.ToString();
-                maskedTextBoxBirthDate.Text = employeee.BirthDate.ToString();
+                textBoxNumber.Text = employee.EmployeeId.ToString();
+                textBoxFirstName.Text = employee.FirstName;
+                textBoxLastName.Text = employee.LastName;
+                textBoxAddress.Text = employee.Address;
+                textBoxPosition.Text = employee.Position;
+                textBoxNumber.Text = employee.EmployeeId.ToString();
+                maskedTextBoxBirthDate.Text = employee.BirthDate.ToString();
             }
             else
                 buttonAddEmployee.Visible = true;
+
         }
 
         private void textboxReadOnly()
