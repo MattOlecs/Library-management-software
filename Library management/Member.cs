@@ -12,10 +12,10 @@ namespace Library_management
         public Member()
         { }
 
-        //Member constructor
+        //Member constructor for adding NEW member to database
         public Member(string firstName, string lastName, string address, string phoneNumber, string email)
         {
-            //created array of function arguments for a function that checks if any of them is null
+            //created array of function arguments to pass it to function that checks if any of them is null
             string[] args = { firstName, lastName, address, phoneNumber, email };
 
             CheckForNull(args);

@@ -9,11 +9,12 @@ namespace Library_management
 {
     class LibraryCardDataAccess
     {
-        public void InsertLibraryCard(LibraryCard card)
+        //This function is used for creating FIRST library card for NEW member
+        public void InsertLibraryCard(string cardNumber)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Library_management")))
             {
-                connection.Execute("dbo.Insert_LibraryCard @CardNumber, @MemberId", card);
+                connection.Execute("dbo.Insert_LibraryCard @CardNumber", new { CardNumber = cardNumber });
             }
         }
 

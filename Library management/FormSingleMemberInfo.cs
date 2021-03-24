@@ -68,6 +68,12 @@ namespace Library_management
                     MemberDataAccess mda = new MemberDataAccess();
 
                     mda.InsertMember(member);
+
+                    LibraryCardDataAccess lda = new LibraryCardDataAccess();
+
+                    LibraryCard card = new LibraryCard();
+
+                    lda.InsertLibraryCard(card.CardNumber);
                 }
  
             }

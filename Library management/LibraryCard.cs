@@ -9,9 +9,8 @@ namespace Library_management
         private string _cardNumber;
         private int _memberId;
 
-        public LibraryCard(int memberId)
+        public LibraryCard()
         {
-            this.MemberId = memberId;
             this.CardNumber = generateCardNumber();
         }
 
