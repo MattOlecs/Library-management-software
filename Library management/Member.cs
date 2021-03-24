@@ -15,6 +15,7 @@ namespace Library_management
         //Member constructor
         public Member(string firstName, string lastName, string address, string phoneNumber, string email)
         {
+            //created array of function arguments for a function that checks if any of them is null
             string[] args = { firstName, lastName, address, phoneNumber, email };
 
             CheckForNull(args);
@@ -26,7 +27,7 @@ namespace Library_management
             this.Email = email;
         }
 
-        //this function check if any of function string parameters is null
+        //This function checks if any of other function's string parameters is null
         //if yes, throws ArgumentNullException
         private void CheckForNull(params string[] args)
         {

@@ -34,34 +34,42 @@ namespace Library_management
 
         }
 
+        //Checks if all Textboxes have value in it
+        //doesn't check textboxCardNumber because it's readonly
+        //user doesn't input card number
+        private bool checkIfTextboxesNull()
+        {
+            foreach (Control control in this.Controls)
+            {
+                TextBox textBox = control as TextBox;
+                if (textBox != null && textBox != textBoxCardNumber)
+                {
+                    if (string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        MessageBox.Show(textBox.Name + " Text box can't be empty");
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
         //Activates function that adds new member
         //Button visible if bool edit = false
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                //if (string.IsNullOrEmpty(textBoxFirstName.Text) || string.IsNullOrEmpty(textBoxLastName.Text) || string.IsNullOrEmpty(textBoxAddress.Text) || string.IsNullOrEmpty(textBoxPhoneNumber.Text) || string.IsNullOrEmpty(textBoxEmail.Text))
-                //{
-                //    MessageBox.Show("All boxes need to be filled in.");
-                //}
-                //else
-                //{
-                //    Member member = new Member();
-                //}
-                //foreach (Control control in this.Controls)
-                //{
-                //    TextBox textBox = control as TextBox;
-                //    if (textBox != null && textBox != textBoxCardNumber)
-                //    {
-                //        if (string.IsNullOrWhiteSpace(textBox.Text))
-                //        {
-                //            MessageBox.Show("Text box can't be empty");
-                //        }
-                //    }
-                //}
+                if (checkIfTextboxesNull()) 
+                {
+                    Member member = new Member(textBoxFirstName.Text, textBoxLastName.Text, textBoxAddress.Text, textBoxPhoneNumber.Text, textBoxEmail.Text);
 
-                Member member = new Member(textBoxFirstName.Text, textBoxLastName.Text, textBoxAddress.Text, textBoxPhoneNumber.Text, textBoxEmail.Text);
+                    MemberDataAccess mda = new MemberDataAccess();
 
+                    mda.InsertMember(member);
+                }
+ 
             }
             catch(ArgumentNullException anx)
             {
