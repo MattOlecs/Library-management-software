@@ -177,7 +177,7 @@ namespace Library_management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 761);
+            this.ClientSize = new System.Drawing.Size(850, 800);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxCardNumber);
             this.Controls.Add(this.buttonGenerateNewCard);
@@ -193,6 +193,7 @@ namespace Library_management
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxLastName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormSingleMemberInfo";
             this.Text = "FormSingleMemberInfo";
             this.ResumeLayout(false);

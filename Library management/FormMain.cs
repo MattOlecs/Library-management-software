@@ -98,13 +98,20 @@ namespace Library_management
             Employee employee = new Employee();
 
             Form form = new FormSingleEmployeeInfo(employee, false);
-            form.ShowDialog();
+            form.Show();
+            form.MdiParent = this;
+            hideSubMenu();
+            form.Dock = DockStyle.Fill;
         }
 
         private void buttonSearchMember_Click(object sender, EventArgs e)
         {
             Form form = new FormMembersSearch();
-            form.ShowDialog();
+
+            form.Show();
+            form.MdiParent = this;
+            hideSubMenu();
+            form.Dock = DockStyle.Fill;
         }
 
         //Opens Form in which you can add new member
@@ -115,7 +122,10 @@ namespace Library_management
             Member member = new Member();
 
             Form form = new FormSingleMemberInfo(member, false);
-            form.ShowDialog();
+            form.Show();
+            form.MdiParent = this;   
+            hideSubMenu();
+            form.Dock = DockStyle.Fill;
         }
     }
 }

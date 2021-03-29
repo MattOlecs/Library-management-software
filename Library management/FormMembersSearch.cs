@@ -15,7 +15,11 @@ namespace Library_management
             InitializeComponent();
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void FormMembersSearch_Load(object sender, EventArgs e)
+        {
+            comboBoxSearchBy.SelectedIndex = 0;
+        }
+        private void buttonSearchMembers_Click(object sender, EventArgs e)
         {
 
         }

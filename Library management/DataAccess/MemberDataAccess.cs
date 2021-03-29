@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Text;
 
 namespace Library_management
@@ -18,6 +19,14 @@ namespace Library_management
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Library_management")))
             {
                 connection.Execute("dbo.Insert_Member @FirstName, @LastName, @Address, @PhoneNumber, @Email", member);
+            }
+        }
+
+        public List<Member> SearchMembers(string searchedBy, string searchedValue)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Library_management")))
+            {
+                return connection.Query<Member>($"dbo.SearchBy{searchedBy}_Employees @SearchedValue", new { SearchedValue = searchedValue }).ToList();
             }
         }
     }

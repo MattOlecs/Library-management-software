@@ -45,6 +45,7 @@ namespace Library_management
             set => _memberId = value;
         }
 
+        [System.ComponentModel.DisplayName("E-mail")]
         public string Email
         {
             get => _email;
@@ -52,6 +53,7 @@ namespace Library_management
             set => _email = value;
         }
 
+        [System.ComponentModel.DisplayName("Phone number")]
         public string PhoneNumber
         {
             get => _phoneNumber;
@@ -59,6 +61,7 @@ namespace Library_management
             set => _phoneNumber = value;
         }
 
+        [System.ComponentModel.DisplayName("Card number")]
         public string LibraryCardNumber
         {
             get => _libraryCardNumber;

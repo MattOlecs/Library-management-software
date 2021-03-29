@@ -198,7 +198,7 @@ namespace Library_management
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(834, 761);
+            this.ClientSize = new System.Drawing.Size(850, 800);
             this.Controls.Add(this.buttonConfirmEdit);
             this.Controls.Add(this.maskedTextBoxBirthDate);
             this.Controls.Add(this.buttonAddEmployee);
@@ -215,6 +215,7 @@ namespace Library_management
             this.Controls.Add(this.textBoxNumber);
             this.Controls.Add(this.textBoxLastName);
             this.Controls.Add(this.textBoxFirstName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormSingleEmployeeInfo";
             this.ResumeLayout(false);
             this.PerformLayout();
