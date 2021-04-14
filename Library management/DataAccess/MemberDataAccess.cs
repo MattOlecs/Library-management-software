@@ -26,7 +26,7 @@ namespace Library_management
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Library_management")))
             {
-                return connection.Query<Member>($"dbo.SearchBy{searchedBy}_Employees @SearchedValue", new { SearchedValue = searchedValue }).ToList();
+                return connection.Query<Member>($"dbo.SearchBy{searchedBy}_Members @SearchedValue", new { SearchedValue = searchedValue }).ToList();
             }
         }
     }

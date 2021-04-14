@@ -7,23 +7,22 @@ namespace Library_management
     public class Person
     {
         private string _firstName, _lastName, _address;
-        private DateTime _birthDate;
+        
 
         public Person()
         {
 
         }
 
-        public Person(string firstName, string lastName, string address, DateTime birthDate)
+        public Person(string firstName, string lastName, string address)
         {
             FirstName = firstName;
             LastName = lastName;
             Address = address;
-            BirthDate = birthDate;
         }
 
 
-        [System.ComponentModel.DisplayName("FirstName")]
+        [System.ComponentModel.DisplayName("First Name")]
         public string FirstName
         {
             get => _firstName;
@@ -44,14 +43,6 @@ namespace Library_management
             get => _address;
 
             set => _address = value;
-        }
-        
-        [System.ComponentModel.DisplayName("Birth date")]
-        public DateTime BirthDate
-        {
-            get => _birthDate;
-
-            set => _birthDate = value;
         }
 
     }

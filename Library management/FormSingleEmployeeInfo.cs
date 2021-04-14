@@ -20,7 +20,6 @@ namespace Library_management
                 textBoxFirstName.Text = employee.FirstName;
                 textBoxLastName.Text = employee.LastName;
                 textBoxAddress.Text = employee.Address;
-                textBoxPosition.Text = employee.Position;
                 textBoxNumber.Text = employee.EmployeeId.ToString();
                 maskedTextBoxBirthDate.Text = employee.BirthDate.ToString();
             }

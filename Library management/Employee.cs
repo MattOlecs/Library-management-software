@@ -6,30 +6,28 @@ namespace Library_management
 {
     public class Employee : Person
     {
-        private string _position;
         private int _employeeId;
+        private DateTime _birthDate;
 
 
         public Employee()
         {}
 
-        public Employee(string firstName, string lastName, string address, DateTime birthDate, string position)//: base(firstName, lastName, address, birthDate) 
+        public Employee(string firstName, string lastName, string address, DateTime birthDate)//: base(firstName, lastName, address, birthDate) 
         {
             this.FirstName = firstName;
             this.LastName = lastName;
             this.Address = address;
             this.BirthDate = birthDate;
-            this.Position = position;
         }
 
-        public Employee(int employeeId, string firstName, string lastName, string address, DateTime birthDate, string position) //: base(firstName, lastName, address, birthDate)
+        public Employee(int employeeId, string firstName, string lastName, string address, DateTime birthDate) //: base(firstName, lastName, address, birthDate)
         {
             this.EmployeeId = employeeId;
             this.FirstName = firstName;
             this.LastName = lastName;
             this.Address = address;
             this.BirthDate = birthDate;
-            this.Position = position;
         }
 
 
@@ -41,12 +39,13 @@ namespace Library_management
             set => _employeeId = value;
         }
 
-        public string Position
+        [System.ComponentModel.DisplayName("Birth Date")]
+        public DateTime BirthDate  
         {
-            get => _position;
+            get => _birthDate;
 
-            set => _position = value;
+            set => _birthDate = value;
         }
 
-    }
+}
 }

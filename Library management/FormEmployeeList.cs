@@ -18,18 +18,19 @@ namespace Library_management
         private void Form_2_Load(object sender, EventArgs e)
         {
             comboBoxSearchByType.SelectedIndex = 0;
-
-            EmployeeDataAccess dA = new EmployeeDataAccess();
-            dataGridView1.DataSource = dA.GetAllEmployees();
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             
+            EmployeeDataAccess dA = new EmployeeDataAccess();
+            dataGridViewEmployees.DataSource = dA.GetAllEmployees();
+            dataGridViewEmployees.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewEmployees.AutoGenerateColumns = false;
+            dataGridViewEmployees.Columns[1].DisplayIndex = 4;
         }
 
         private void button_OpenEmployeeWindow_Click(object sender, EventArgs e)
         {
-                if (dataGridView1.SelectedRows.Count == 1)
+                if (dataGridViewEmployees.SelectedRows.Count == 1)
                 {
-                    Employee employee = (Employee)dataGridView1.CurrentRow.DataBoundItem;
+                    Employee employee = (Employee)dataGridViewEmployees.CurrentRow.DataBoundItem;
                     Form form = new FormSingleEmployeeInfo(employee, true);
                     form.ShowDialog();
                 }
@@ -45,8 +46,7 @@ namespace Library_management
 
                 string searchBy = "EmployeeId";
                 List<Employee> foundEmployees = new List<Employee>();
-                dataGridView1.DataSource = foundEmployees;
-
+                dataGridViewEmployees.DataSource = foundEmployees;
 
                 switch (comboBoxSearchByType.SelectedIndex)
                 {
@@ -62,23 +62,18 @@ namespace Library_management
                     case 3:
                         searchBy = "Address";
                         break;
-                    case 4:
-                        searchBy = "Position";
-                        break;
                 }
 
-                
                 foundEmployees = eDA.SearchEmployees(searchBy, textBoxSearchedValue.Text);
                 if (foundEmployees.Count == 0)
                 {
-                    MessageBox.Show("No items found.");
+                    MessageBox.Show("No employee found.");
                 }
                 else
-                    dataGridView1.DataSource = foundEmployees;
+                    dataGridViewEmployees.DataSource = foundEmployees;
 
                 //due to order in class properties, had to set displayindex of this column
-                dataGridView1.Columns["Position"].DisplayIndex = 3;
-
+                dataGridViewEmployees.Columns[1].DisplayIndex = 4;
             }
             catch (Exception ex)
             {
