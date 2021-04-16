@@ -4,14 +4,17 @@ using System.Text;
 
 namespace Library_management
 {
-    class Item
+    public class Item
     {
 
         private string _type, _genre, _title, _author, _publisher, _isbn, _shelf;
         private int _id, _editionNumber, _pages, _copies;
 
+        //Used by dapper while getting Items from database
         public Item()
-        { }
+        {
+        }
+
         public Item(string type, string genre, string title, string author, string publisher, int editionNumber, int pages, string isbn, int copies, string shelf)
         {
             this.Type = type;

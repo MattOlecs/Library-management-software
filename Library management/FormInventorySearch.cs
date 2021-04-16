@@ -48,6 +48,35 @@ namespace Library_management
             }
         }
 
+        //Public property that's gonna be returned for the FormBorrowBook
+        public List<Item> listOfBooksToBorrow = new List<Item>();
 
+        //Choose items that gonna be borrowed
+        private void buttonPickBook_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Item selectedBook = (Item)dataGridView1.CurrentRow.DataBoundItem;
+                this.listOfBooksToBorrow.Add(selectedBook);
+                listBox1.Items.Add($"{selectedBook.Title}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonConfirmSelection_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

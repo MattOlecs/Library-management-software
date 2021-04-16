@@ -127,5 +127,14 @@ namespace Library_management
             hideSubMenu();
             form.Dock = DockStyle.Fill;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form form = new FormBorrowBook();
+            form.Show();
+            form.MdiParent = this;
+            hideSubMenu();
+            form.Dock = DockStyle.Fill;
+        }
     }
 }

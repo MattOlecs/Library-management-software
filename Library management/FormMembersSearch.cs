@@ -72,5 +72,33 @@ namespace Library_management
             }
 
         }
+
+        private void dataGridViewMembers_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewMembers.SelectedRows.Count != 1)
+            {
+                buttonChoose.Enabled = false;
+            }
+            else
+                buttonChoose.Enabled = true;
+        }
+
+        //Public property that's gonna be returned for the FormBorrowBook
+        public Member Member { get; set; }
+
+        //Choose a member to whom book is gonna be borrowed
+        private void buttonChoose_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Member = (Member)dataGridViewMembers.CurrentRow.DataBoundItem;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

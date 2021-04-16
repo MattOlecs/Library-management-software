@@ -35,6 +35,7 @@ namespace Library_management
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSearchMembers = new System.Windows.Forms.Button();
             this.panelSearch = new System.Windows.Forms.Panel();
+            this.buttonChoose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).BeginInit();
             this.panelSearch.SuspendLayout();
             this.SuspendLayout();
@@ -44,11 +45,12 @@ namespace Library_management
             this.dataGridViewMembers.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMembers.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridViewMembers.Location = new System.Drawing.Point(0, 125);
+            this.dataGridViewMembers.Location = new System.Drawing.Point(0, 146);
             this.dataGridViewMembers.Name = "dataGridViewMembers";
             this.dataGridViewMembers.RowTemplate.Height = 25;
-            this.dataGridViewMembers.Size = new System.Drawing.Size(850, 675);
+            this.dataGridViewMembers.Size = new System.Drawing.Size(850, 654);
             this.dataGridViewMembers.TabIndex = 0;
+            this.dataGridViewMembers.SelectionChanged += new System.EventHandler(this.dataGridViewMembers_SelectionChanged);
             // 
             // comboBoxSearchBy
             // 
@@ -103,12 +105,23 @@ namespace Library_management
             this.panelSearch.Size = new System.Drawing.Size(850, 87);
             this.panelSearch.TabIndex = 5;
             // 
+            // buttonChoose
+            // 
+            this.buttonChoose.Location = new System.Drawing.Point(635, 109);
+            this.buttonChoose.Name = "buttonChoose";
+            this.buttonChoose.Size = new System.Drawing.Size(203, 31);
+            this.buttonChoose.TabIndex = 6;
+            this.buttonChoose.Text = "Choose member";
+            this.buttonChoose.UseVisualStyleBackColor = true;
+            this.buttonChoose.Click += new System.EventHandler(this.buttonChoose_Click);
+            // 
             // FormMembersSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(850, 800);
+            this.Controls.Add(this.buttonChoose);
             this.Controls.Add(this.panelSearch);
             this.Controls.Add(this.dataGridViewMembers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -130,5 +143,6 @@ namespace Library_management
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSearchMembers;
         private System.Windows.Forms.Panel panelSearch;
+        private System.Windows.Forms.Button buttonChoose;
     }
 }
