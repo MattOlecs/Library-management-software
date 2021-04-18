@@ -34,6 +34,14 @@ namespace Library_management
 
         }
 
+        private void FormSingleMemberInfo_Load(object sender, EventArgs e)
+        {
+            //dataGridViewOrders.DataSource = dA.GetAllEmployees();
+            dataGridViewOrders.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewOrders.AutoGenerateColumns = false;
+            //dataGridViewOrders.Columns[1].DisplayIndex = 4;
+        }
+
         //Checks if all Textboxes have value in it
         //doesn't check textboxCardNumber because it's readonly
         //user doesn't input card number
@@ -94,5 +102,7 @@ namespace Library_management
         {
 
         }
+
+
     }
 }

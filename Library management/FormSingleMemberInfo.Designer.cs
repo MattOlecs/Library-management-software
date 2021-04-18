@@ -44,6 +44,8 @@ namespace Library_management
             this.buttonGenerateNewCard = new System.Windows.Forms.Button();
             this.textBoxCardNumber = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.dataGridViewOrders = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrders)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -128,7 +130,7 @@ namespace Library_management
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(288, 213);
+            this.buttonAdd.Location = new System.Drawing.Point(244, 213);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(154, 41);
             this.buttonAdd.TabIndex = 10;
@@ -138,7 +140,7 @@ namespace Library_management
             // 
             // buttonConfirm
             // 
-            this.buttonConfirm.Location = new System.Drawing.Point(288, 260);
+            this.buttonConfirm.Location = new System.Drawing.Point(244, 260);
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(154, 41);
             this.buttonConfirm.TabIndex = 11;
@@ -148,9 +150,9 @@ namespace Library_management
             // 
             // buttonGenerateNewCard
             // 
-            this.buttonGenerateNewCard.Location = new System.Drawing.Point(626, 248);
+            this.buttonGenerateNewCard.Location = new System.Drawing.Point(14, 279);
             this.buttonGenerateNewCard.Name = "buttonGenerateNewCard";
-            this.buttonGenerateNewCard.Size = new System.Drawing.Size(154, 25);
+            this.buttonGenerateNewCard.Size = new System.Drawing.Size(206, 22);
             this.buttonGenerateNewCard.TabIndex = 12;
             this.buttonGenerateNewCard.Text = "Generate new card";
             this.buttonGenerateNewCard.UseVisualStyleBackColor = true;
@@ -173,11 +175,22 @@ namespace Library_management
             this.label6.TabIndex = 14;
             this.label6.Text = "Library card number";
             // 
+            // dataGridViewOrders
+            // 
+            this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOrders.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewOrders.Location = new System.Drawing.Point(0, 353);
+            this.dataGridViewOrders.Name = "dataGridViewOrders";
+            this.dataGridViewOrders.RowTemplate.Height = 25;
+            this.dataGridViewOrders.Size = new System.Drawing.Size(850, 447);
+            this.dataGridViewOrders.TabIndex = 15;
+            // 
             // FormSingleMemberInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 800);
+            this.Controls.Add(this.dataGridViewOrders);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxCardNumber);
             this.Controls.Add(this.buttonGenerateNewCard);
@@ -196,6 +209,8 @@ namespace Library_management
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormSingleMemberInfo";
             this.Text = "FormSingleMemberInfo";
+            this.Load += new System.EventHandler(this.FormSingleMemberInfo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,5 +233,6 @@ namespace Library_management
         private System.Windows.Forms.Button buttonGenerateNewCard;
         private System.Windows.Forms.TextBox textBoxCardNumber;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dataGridViewOrders;
     }
 }

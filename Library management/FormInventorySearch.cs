@@ -56,9 +56,12 @@ namespace Library_management
         {
             try
             {
-                Item selectedBook = (Item)dataGridView1.CurrentRow.DataBoundItem;
-                this.listOfBooksToBorrow.Add(selectedBook);
-                listBox1.Items.Add($"{selectedBook.Title}");
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    Item selectedBook = (Item)dataGridView1.CurrentRow.DataBoundItem;
+                    this.listOfBooksToBorrow.Add(selectedBook);
+                    listBox1.Items.Add($"{selectedBook.Title}");
+                }
             }
             catch (Exception ex)
             {
